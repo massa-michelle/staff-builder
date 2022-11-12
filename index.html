@@ -27,41 +27,57 @@
     </nav>
 
     <h2>Staff Builder</h2>
-
     <!-- Staff Creator -->
     <section id="staffBuilder">
-        <div id="staffContoller">
-            <div class="picker">
-                <label for="colorpicker">Change the color of Line 1:</label>
-                <input type="color" id="picker1" value="#ff0000">
-                <button onclick="getValueOfPicker('picker1', 'staffLine1')">Set</button>
-            </div>
+        <div class="boxContainer" id="staffContoller">
+            <div id="innerControls">
+                <div id="colorPickers">
+                    <h3>Change the color of the lines:</h3>
+                    <div class="picker">
+                        <label for="colorpicker">Line 1:</label>
+                        <input type="color" id="picker1" value="#ff0000">
+                        <button onclick="getValueOfPicker('picker1', 'staffLine1')">Set</button>
+                    </div>
 
-            <div class="picker"> 
-                <label for="colorpicker">Change the color of Line 2:</label>
-                <input type="color" id="picker2" value="#ff8000">
-                <button onclick="getValueOfPicker('picker2', 'staffLine2')">Set</button>
-            </div>
+                    <div class="picker">
+                        <label for="colorpicker">Line 2:</label>
+                        <input type="color" id="picker2" value="#ff8000">
+                        <button onclick="getValueOfPicker('picker2', 'staffLine2')">Set</button>
+                    </div>
 
-            <div class="picker">
-                <label for="colorpicker">Change the color of Line 3:</label>
-                <input type="color" id="picker3" value="#0040ff">
-                <button onclick="getValueOfPicker('picker3', 'staffLine3')">Set</button>
-            </div>
+                    <div class="picker">
+                        <label for="colorpicker">Line 3:</label>
+                        <input type="color" id="picker3" value="#0040ff">
+                        <button onclick="getValueOfPicker('picker3', 'staffLine3')">Set</button>
+                    </div>
 
-            <div class="picker">
-                <label for="colorpicker">Change the color of Line 4:</label>
-                <input type="color" id="picker4" value="#40ff00">
-                <button onclick="getValueOfPicker('picker4', 'staffLine4')">Set</button>
-            </div>
+                    <div class="picker">
+                        <label for="colorpicker">Line 4:</label>
+                        <input type="color" id="picker4" value="#40ff00">
+                        <button onclick="getValueOfPicker('picker4', 'staffLine4')">Set</button>
+                    </div>
 
-            <div class="picker">
-                <label for="colorpicker">Change the color of Line 5:</label>
-                <input type="color" id="picker5" value="#bf00ff">
-                <button onclick="getValueOfPicker('picker5', 'staffLine5')">Set</button>
-            </div>
+                    <div class="picker">
+                        <label for="colorpicker">Line 5:</label>
+                        <input type="color" id="picker5" value="#bf00ff">
+                        <button onclick="getValueOfPicker('picker5', 'staffLine5')">Set</button>
+                    </div>
 
-            <button onclick="resetToBlack()">Reset</button>
+                </div>
+
+                <div id="lineChanges">
+                    <h3>Change the spacing of the lines</h3>
+
+
+                    <h3>Change the width of the lines:</h3>
+
+                </div>
+            </div>
+            <div id="buttonControls">
+                <button class="button" id="resetButton" onclick="resetToBlack()">Reset</button>
+                <button class="button" id="updateButton">Update</button>
+                <button class="button" id="print">Print</button>
+            </div>
         </div>
         <div class="staff">
             <hr class="staffLine staffLine1">
@@ -99,9 +115,20 @@
             <hr class="staffLine staffLine5">
         </div>
     </section>
+
+    <div class="boxContainer">
+        <h3 id="aboutHeader">Welcome to Staff Builder!</h3>
+        <p id="aboutSection">
+
+            Staff Builer allows you to print colored staff sheets to aid those with dyslexia,
+            others who have troubles reading traditional music sheets, or those who just want to add some color!
+            Feel free to print and use as needed.
+        </p>
+    </div>
+
     <!-- Footer section -->
     <footer>
-        <p class="copy">&copy; Copyright 2022 | Michelle Massa</p>
+        <p class="copy">&copy; Copyright 2022 | Michelle Massa and Cara Clark</p>
     </footer>
 
     <!-- Ion icons scripts -->

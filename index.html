@@ -31,51 +31,70 @@
     <section id="staffBuilder">
         <div class="boxContainer" id="staffContoller">
             <div id="innerControls">
-                <div id="colorPickers">
-                    <h3>Change the color of the lines:</h3>
-                    <div class="picker">
-                        <label class="colorLineLabel" for="picker1">Line 1:</label>
-                        <div class="colorContainer">
-                            <input type="color" class="colorPicker" id="picker1" value="#ff0000">
+                <div id="colorControls">
+                    <div id="colorPickers">
+                        <h3>Change the color of the lines:</h3>
+                        <div class="picker">
+                            <label class="colorLineLabel" for="picker1">Line 1:</label>
+                            <div class="colorContainer">
+                                <input type="color" class="colorPicker" id="picker1" value="#ff0000">
+                            </div>
+                        </div>
+
+                        <div class="picker">
+                            <label class="colorLineLabel" for="picker2">Line 2:</label>
+                            <div class="colorContainer">
+                                <input type="color" class="colorPicker" id="picker2" value="#ff8000">
+                            </div>
+                        </div>
+
+                        <div class="picker">
+                            <label class="colorLineLabel" for="picker3">Line 3:</label>
+                            <div class="colorContainer">
+                                <input type="color" class="colorPicker" id="picker3" value="#0040ff">
+                            </div>
+                        </div>
+
+                        <div class="picker">
+                            <label class="colorLineLabel" for="picker4">Line 4:</label>
+                            <div class="colorContainer">
+                                <input type="color" class="colorPicker" id="picker4" value="#40ff00">
+                            </div>
+                        </div>
+
+                        <div class="picker">
+                            <label class="colorLineLabel" for="picker5">Line 5:</label>
+                            <div class="colorContainer">
+                                <input type="color" class="colorPicker" id="picker5" value="#bf00ff">
+                            </div>
                         </div>
                     </div>
-
-                    <div class="picker">
-                        <label class="colorLineLabel" for="picker2">Line 2:</label>
-                        <div class="colorContainer">
-                            <input type="color" class="colorPicker" id="picker2" value="#ff8000">
+                    <div id="presetControls">
+                        <div id="presetButtons">
+                            <button class="button" onclick="presetGreyScale()">Greyscale</button>
+                            <button class="button" onclick="presetRGB()">Red/Green/Blue</button>
+                            <button class="button" onclick="presetColorBlind()">Color Blind</button>
                         </div>
                     </div>
-
-                    <div class="picker">
-                        <label class="colorLineLabel" for="picker3">Line 3:</label>
-                        <div class="colorContainer">
-                            <input type="color" class="colorPicker" id="picker3" value="#0040ff">
-                        </div>
-                    </div>
-
-                    <div class="picker">
-                        <label class="colorLineLabel" for="picker4">Line 4:</label>
-                        <div class="colorContainer">
-                            <input type="color" class="colorPicker" id="picker4" value="#40ff00">
-                        </div>
-                    </div>
-
-                    <div class="picker">
-                        <label class="colorLineLabel" for="picker5">Line 5:</label>
-                        <div class="colorContainer">
-                            <input type="color" class="colorPicker" id="picker5" value="#bf00ff">
-                        </div>
-                    </div>
-
                 </div>
+                
 
                 <div id="lineChanges">
                     <h3>Change the spacing of the lines</h3>
-                    <br><br>
-
+                    <div id="lineSpacing">
+                        <label class="lineSpacingLabel" for="lineSpaceInput">Line Space:</label>
+                        <div id="lineSpaceContainer">
+                            <input type="number" id="lineSpaceInput" name="lineSpaceInput" min="1" max="3" value="1">
+                        </div>
+                    </div>
+                    <br>
                     <h3>Change the width of the lines:</h3>
-                    <br><br>
+                    <div id="lineWidth">
+                        <label class="lineWidthLabel" for="lineWidthInput">Line Width:</label>
+                        <div id="lineWidthContainer">
+                            <input type="number" id="lineWidthInput" name="lineWidthInput" min="1" max="6" value="2">
+                        </div>
+                    </div>
 
                 </div>
             </div>

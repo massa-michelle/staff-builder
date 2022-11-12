@@ -61,7 +61,7 @@ section {
 }
 
 .staff {
-    margin-bottom: 3%;
+    margin-bottom: 80px;
 }
 
 /* CSS Resets end */
@@ -194,7 +194,6 @@ h3 {
     cursor: pointer;
 }
 
-
 .picker {
     display: flex;
     flex-direction: row;
@@ -215,6 +214,21 @@ h3 {
     border: solid 2px #ddd;
 }
 
+#colorControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#presetButtons {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .colorPicker {
     position: absolute;
     right: -8px;
@@ -222,4 +236,28 @@ h3 {
     width: 56px;
     height: 56px;
     border: none;
+}
+
+#lineSpacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.lineSpacingLabel {
+    margin-right: 3%;
+}
+
+#lineWidth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.lineWidthLabel {
+    margin-right: 3%;
 }

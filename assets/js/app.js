@@ -63,7 +63,7 @@ function updateStaff() {
     changeLineWidth();
 }
 
-function presetGreyScale() {
+function presetGrayScale() {
     var black = "#000000";
     var grey = "#808080";
     document.getElementById("picker1").value = black;

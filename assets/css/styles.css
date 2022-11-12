@@ -74,6 +74,7 @@ nav {
     z-index: 1;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 1.5rem 3.5rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -93,9 +94,31 @@ nav a:hover {
     border-bottom: 2px solid var(--secondary-color);
 }
 
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+}
+
 nav ul li {
     font-weight: var(--bold-font);
 }
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+#brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Navbar ends */
 
 /* Footer section */
 footer {
@@ -141,7 +164,7 @@ hr.staffLine {
     margin-bottom: 10px;
 }
 
-#aboutSection {
+.cardSection {
     margin: auto;
     width: 90%;
     text-align: center;
@@ -154,6 +177,7 @@ hr.staffLine {
     padding: 20px;
     width: 80%;
     margin: auto;
+    margin-bottom: 5%;
 }
 
 #innerControls {
@@ -173,8 +197,9 @@ hr.staffLine {
     margin-bottom: 5%;
 }
 
-h3#aboutHeader {
+.cardHeader {
     text-align: center;
+    margin-bottom: 2% !important;
 }
 
 h3 {
@@ -262,8 +287,30 @@ h3 {
     margin-right: 3%;
 }
 
+input[type=number],
+select {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#siteLogo {
+    height: 50px;
+    width: 50px;
+}
+
 @media print {
-    nav, h1, h2, footer, .boxContainer, #innerControls {
+
+    nav,
+    h1,
+    h2,
+    footer,
+    .boxContainer,
+    #innerControls {
         display: none;
     }
 }

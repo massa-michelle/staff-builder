@@ -44,6 +44,9 @@ function resetToBlack() {
     document.getElementById("picker4").value = "#40ff00";
     document.getElementById("picker5").value = "#bf00ff";
 
+    document.getElementById("lineSpaceInput").value = 1;
+    document.getElementById("lineWidthInput").value = 2;
+
     var staffLines = document.getElementsByClassName("staffLine"); 
     for (var i = 0; i < staffLines.length; i++) {
         staffLines[i].style.backgroundColor = "black";

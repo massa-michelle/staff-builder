@@ -1,4 +1,4 @@
-img {
+.bioImg {
     height: auto;
     width: 250px;
 }
@@ -16,7 +16,7 @@ img {
 }
 
 .right {
-margin-left: 5%;
+    margin-left: 5%;
 }
 
 .bioContainer {
@@ -32,32 +32,59 @@ margin-left: 5%;
     margin-top: 5%;
 }
 
+#siteCreditContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 1em;
+}
+
+#logoCollection {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.thankYouLogos {
+    width: 5rem;
+    height: 5rem;
+}
+
 /* Social buttons */
 .socials {
     display: flex;
     flex-direction: crowolumn;
-  }
-  
-  .socicon {
+}
+
+.socicon {
     width: 2rem;
     height: 2rem;
-  }
-  
-  #microsoftLogo, #youtubeLogo {
-      animation: pulse-animation 2s infinite;
-  }
-  
-  @keyframes pulse-animation {
-      0% {
+}
+
+#microsoftLogo {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
         transform: scale(0.95);
-      }
-      
-      70% {
-        transform: scale(1.1);
-      }
-      
-      100% {
-        transform: scale(0.95);
-      }
     }
-  /* Social button ends */
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+/* Social button ends */

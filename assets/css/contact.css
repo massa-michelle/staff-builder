@@ -1,0 +1,32 @@
+img {
+    height: auto;
+    width: 250px;
+}
+
+#creatorsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bioSection {
+    margin: auto;
+    text-align: center;
+}
+
+.right {
+margin-left: 5%;;
+}
+
+.bioContainer {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}

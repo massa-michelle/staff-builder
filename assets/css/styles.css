@@ -261,3 +261,9 @@ h3 {
 .lineWidthLabel {
     margin-right: 3%;
 }
+
+@media print {
+    nav, h1, h2, footer, .boxContainer, #innerControls {
+        display: none;
+    }
+}

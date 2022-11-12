@@ -34,48 +34,54 @@
                 <div id="colorPickers">
                     <h3>Change the color of the lines:</h3>
                     <div class="picker">
-                        <label for="colorpicker">Line 1:</label>
-                        <input type="color" id="picker1" value="#ff0000">
-                        <button onclick="getValueOfPicker('picker1', 'staffLine1')">Set</button>
+                        <label class="colorLineLabel" for="picker1">Line 1:</label>
+                        <div class="colorContainer">
+                            <input type="color" class="colorPicker" id="picker1" value="#ff0000">
+                        </div>
                     </div>
 
                     <div class="picker">
-                        <label for="colorpicker">Line 2:</label>
-                        <input type="color" id="picker2" value="#ff8000">
-                        <button onclick="getValueOfPicker('picker2', 'staffLine2')">Set</button>
+                        <label class="colorLineLabel" for="picker2">Line 2:</label>
+                        <div class="colorContainer">
+                            <input type="color" class="colorPicker" id="picker2" value="#ff8000">
+                        </div>
                     </div>
 
                     <div class="picker">
-                        <label for="colorpicker">Line 3:</label>
-                        <input type="color" id="picker3" value="#0040ff">
-                        <button onclick="getValueOfPicker('picker3', 'staffLine3')">Set</button>
+                        <label class="colorLineLabel" for="picker3">Line 3:</label>
+                        <div class="colorContainer">
+                            <input type="color" class="colorPicker" id="picker3" value="#0040ff">
+                        </div>
                     </div>
 
                     <div class="picker">
-                        <label for="colorpicker">Line 4:</label>
-                        <input type="color" id="picker4" value="#40ff00">
-                        <button onclick="getValueOfPicker('picker4', 'staffLine4')">Set</button>
+                        <label class="colorLineLabel" for="picker4">Line 4:</label>
+                        <div class="colorContainer">
+                            <input type="color" class="colorPicker" id="picker4" value="#40ff00">
+                        </div>
                     </div>
 
                     <div class="picker">
-                        <label for="colorpicker">Line 5:</label>
-                        <input type="color" id="picker5" value="#bf00ff">
-                        <button onclick="getValueOfPicker('picker5', 'staffLine5')">Set</button>
+                        <label class="colorLineLabel" for="picker5">Line 5:</label>
+                        <div class="colorContainer">
+                            <input type="color" class="colorPicker" id="picker5" value="#bf00ff">
+                        </div>
                     </div>
 
                 </div>
 
                 <div id="lineChanges">
                     <h3>Change the spacing of the lines</h3>
-
+                    <br><br>
 
                     <h3>Change the width of the lines:</h3>
+                    <br><br>
 
                 </div>
             </div>
             <div id="buttonControls">
                 <button class="button" id="resetButton" onclick="resetToBlack()">Reset</button>
-                <button class="button" id="updateButton">Update</button>
+                <button class="button" id="updateButton" onclick="updateStaff()">Update</button>
                 <button class="button" id="print">Print</button>
             </div>
         </div>

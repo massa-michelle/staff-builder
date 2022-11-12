@@ -192,4 +192,34 @@ h3 {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
+
+
+.picker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.colorLineLabel {
+    margin-right: 3%;
+}
+
+.colorContainer {
+    position: relative;
+    overflow: hidden;
+    width: 35px;
+    height: 25px;
+    border: solid 2px #ddd;
+}
+
+.colorPicker {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 56px;
+    height: 56px;
+    border: none;
+}

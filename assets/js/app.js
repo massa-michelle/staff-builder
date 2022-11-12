@@ -1,13 +1,16 @@
-function changeStaffColor(line, color) {
-    var elements = document.getElementsByClassName(line); // get all elements
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.backgroundColor = color;
+function changeStaffColor() {
+    // for each line in the staff, change to the appropriate color.
+    for (var i = 1; i < 6; i++) {
+        var elements = document.getElementsByClassName("staffLine" + i); // get all elements
+        for (var j = 0; j < elements.length; j++) {
+            elements[j].style.backgroundColor = getValueOfPicker("picker" + i);
+        }
     }
 }
 
-function getValueOfPicker(id, staffLine) {
+function getValueOfPicker(id) {
     var pickerColor = document.getElementById(id).value;
-    changeStaffColor(staffLine, pickerColor);
+    return pickerColor;
 }
 
 function resetToBlack() {
@@ -15,4 +18,8 @@ function resetToBlack() {
     for (var i = 0; i < elements.length; i++) {
         elements[i].style.backgroundColor = "black";
     }
+}
+
+function updateStaff() {
+    changeStaffColor();
 }

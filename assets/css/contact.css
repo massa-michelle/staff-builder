@@ -12,10 +12,11 @@ img {
 .bioSection {
     margin: auto;
     text-align: center;
+    margin-bottom: 15%;
 }
 
 .right {
-margin-left: 5%;;
+margin-left: 5%;
 }
 
 .bioContainer {
@@ -30,3 +31,33 @@ margin-left: 5%;;
     margin-bottom: 5%;
     margin-top: 5%;
 }
+
+/* Social buttons */
+.socials {
+    display: flex;
+    flex-direction: crowolumn;
+  }
+  
+  .socicon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  #microsoftLogo, #youtubeLogo {
+      animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes pulse-animation {
+      0% {
+        transform: scale(0.95);
+      }
+      
+      70% {
+        transform: scale(1.1);
+      }
+      
+      100% {
+        transform: scale(0.95);
+      }
+    }
+  /* Social button ends */

@@ -1,29 +1,32 @@
 .bioImg {
     height: auto;
-    width: 250px;
+    width: 225px;
 }
 
 #creatorsContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-content: center;
+    width: 90%;
+    margin: auto;
 }
 
 .bioSection {
     margin: auto;
     text-align: center;
-    margin-bottom: 15%;
 }
 
 .right {
-    margin-left: 5%;
+    margin-left: 1em;
 }
 
 .bioContainer {
     display: flex;
     flex-direction: row;
-    width: 600px;
+    width: 32rem;
     background-color: #fff;
     border-radius: 11px;
     box-shadow: 0 3px 10px var(--primary-shadow);

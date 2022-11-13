@@ -5,8 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
 
     <!--CSS Styles -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -25,13 +23,19 @@
     <nav>
         <div id="brand">
             <img id="siteLogo" src="assets/images/icons8-sheet-music-100.png" />
-            <h1>STAFF BUILDER</h1>
+            <a href="index.html">
+                <h1>STAFF BUILDER</h1>
+            </a>
         </div>
         <ul class="navigation">
             <li><a href="index.html#about" class="nav-link">About</a></li>
             <li><a href="index.html#HowTo" class="nav-link">How To Use</a></li>
             <li><a href="" class="nav-link">Contact</a></li>
         </ul>
+        <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+            <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
+        </button>
     </nav>
 
     <h2>About the Creators</h2>
@@ -121,6 +125,9 @@
     <footer>
         <p class="copy">&copy; Copyright 2022 | Michelle Massa and Cara Clark</p>
     </footer>
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
 
     <!-- Ion icons scripts -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

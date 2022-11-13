@@ -87,11 +87,11 @@ nav h1 {
 nav a {
     color: var(--primary-color);
     transition: var(--transition);
+    text-decoration: none;
 }
 
 nav a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    text-decoration: none;
 }
 
 nav ul {
@@ -101,6 +101,15 @@ nav ul {
 
 nav ul li {
     font-weight: var(--bold-font);
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
 }
 
 #brand {
@@ -146,6 +155,10 @@ footer {
     nav ul.show {
         transform: translateX(0);
     }
+
+    .burger-menu {
+        display: block;
+    }
 }
 
 hr.staffLine {
@@ -186,6 +199,7 @@ hr.staffLine {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #buttonControls {
@@ -245,6 +259,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-content: center;
 }
 
@@ -310,8 +325,8 @@ select {
     nav,
     h1,
     h2,
-    footer,
     .boxContainer,
+    .cardContainer,
     #innerControls {
         display: none;
     }

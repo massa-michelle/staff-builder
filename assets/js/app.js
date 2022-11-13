@@ -16,22 +16,22 @@ function getValueOfPicker(id) {
 function changeLineSpacing() {
     var userInput = document.getElementById("lineSpaceInput").value;
     var lineValue = userInput * 10;
-    var staffLines = document.getElementsByClassName("staffLine"); 
+    var staffLines = document.getElementsByClassName("staffLine");
     for (var i = 0; i < staffLines.length; i++) {
-        staffLines[i].style.marginBottom  = lineValue + "px";
+        staffLines[i].style.marginBottom = lineValue + "px";
     }
 
-    var staves = document.getElementsByClassName("staff"); 
+    var staves = document.getElementsByClassName("staff");
     for (var i = 0; i < staves.length; i++) {
         var initialSpacing = 80;
-        staves[i].style.marginBottom  = (initialSpacing * userInput) + "px";
+        staves[i].style.marginBottom = (initialSpacing * userInput) + "px";
     }
 }
 
 function changeLineWidth() {
     var userInput = document.getElementById("lineWidthInput").value;
     var lineValue = userInput;
-    var staffLines = document.getElementsByClassName("staffLine"); 
+    var staffLines = document.getElementsByClassName("staffLine");
     for (var i = 0; i < staffLines.length; i++) {
         staffLines[i].style.height = lineValue + "px";
     }
@@ -47,14 +47,14 @@ function resetToBlack() {
     document.getElementById("lineSpaceInput").value = 1;
     document.getElementById("lineWidthInput").value = 2;
 
-    var staffLines = document.getElementsByClassName("staffLine"); 
+    var staffLines = document.getElementsByClassName("staffLine");
     for (var i = 0; i < staffLines.length; i++) {
         staffLines[i].style.backgroundColor = "black";
         staffLines[i].style.height = 2 + "px";
         staffLines[i].style.marginBottom = "10px"
     }
 
-    var staves = document.getElementsByClassName("staff"); 
+    var staves = document.getElementsByClassName("staff");
     for (var i = 0; i < staves.length; i++) {
         staves[i].style.marginBottom = "80px"
     }
@@ -97,3 +97,26 @@ function presetColorBlind() {
     document.getElementById("picker4").value = purple;
     document.getElementById("picker5").value = orange;
 }
+
+// Nav hamburgerburger selections
+const burger = document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+const nav = document.querySelector("nav");
+
+// Scroll to top selection
+const scrollUp = document.querySelector("#scroll-up");
+
+// Select nav links
+const navLink = document.querySelectorAll(".nav-link");
+
+// Hamburger menu function
+burger.addEventListener("click", () => {
+    ul.classList.toggle("show");
+});
+
+// Close hamburger menu when a link is clicked
+navLink.forEach((link) =>
+    link.addEventListener("click", () => {
+        ul.classList.remove("show");
+    })
+);

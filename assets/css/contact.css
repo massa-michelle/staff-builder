@@ -66,6 +66,7 @@
     display: flex;
     justify-content: center;
     margin-top: 1em;
+    flex-wrap: wrap;
 }
 
 .thankYouLogos {
@@ -103,3 +104,16 @@
 }
 
 /* Social button ends */
+
+@media screen and (max-width: 720px) {
+    .bioContainer {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    .left {
+        display: flex;
+        margin: auto;
+        align-items: center;
+    }
+}

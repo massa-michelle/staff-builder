@@ -63,7 +63,7 @@ section {
 }
 
 .staff {
-    margin-bottom: 80px;
+    margin-bottom: 55px;
 }
 
 /* CSS Resets end */
@@ -333,4 +333,8 @@ select {
     #innerControls {
         display: none;
     }
+
+    .staves {
+        margin-top: 50px;
+        }
 }

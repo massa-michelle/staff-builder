@@ -172,7 +172,7 @@ hr.staffLine {
 
 .cardSection {
     margin: auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 
@@ -194,7 +194,7 @@ hr.staffLine {
     padding: 20px;
     width: 80%;
     margin: auto;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 #innerControls {
@@ -337,4 +337,13 @@ select {
     .staves {
         margin-top: 50px;
         }
+}
+
+#feedbackIFrame {
+    margin: 0 auto;
+    display: block;
+}
+
+#feedbackPage {
+    margin-top: 50px;
 }

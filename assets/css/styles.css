@@ -63,7 +63,7 @@ section {
 }
 
 .staff {
-    margin-bottom: 55px;
+    margin-bottom: 80px;
 }
 
 /* CSS Resets end */
@@ -265,12 +265,19 @@ h3 {
     align-content: center;
 }
 
-#presetButtons {
-    margin-top: 30%;
+.presetButtons {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+#colorButtons {
+    margin-top: 30%;
+}
+
+#sizeButtons {
+    margin-top: 10%;
 }
 
 .colorPicker {

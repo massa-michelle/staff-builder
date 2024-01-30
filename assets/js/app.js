@@ -13,51 +13,108 @@ function getValueOfPicker(id) {
     return pickerColor;
 }
 
-function changeLineSpacing() {
-    var userInput = document.getElementById("lineSpaceInput").value;
-    var lineValue = userInput * 10;
+function changeLineSpacing(size) {
     var staffLines = document.getElementsByClassName("staffLine");
+    var staves = document.getElementsByClassName("staff");
+
     for (var i = 0; i < staffLines.length; i++) {
-        staffLines[i].style.marginBottom = lineValue + "px";
+        if (size == "small") {
+            staffLines[i].style.marginBottom = 10 + "px";
+        }
+
+        if (size == "medium") {
+            staffLines[i].style.marginBottom = 20 + "px";
+        }
+
+        if (size == "large") {
+            staffLines[i].style.marginBottom = 30 + "px";
+        }
     }
 
-    var staves = document.getElementsByClassName("staff");
     for (var i = 0; i < staves.length; i++) {
         var initialSpacing = 80;
-        staves[i].style.marginBottom = (initialSpacing * userInput) + "px";
+
+        if (size == "small") {
+            staves[i].style.marginBottom = (initialSpacing * 1) + "px";
+        }
+
+        if (size == "medium") {
+            staves[i].style.marginTop = (initialSpacing * 1.2) + "px";
+            staves[i].style.marginBottom = (initialSpacing * 1.4) + "px";
+        }
+
+        if (size == "large") {
+            staves[i].style.marginTop = (initialSpacing * 1.25) + "px";
+            staves[i].style.marginBottom = (initialSpacing * 1.35) + "px";
+        }
     }
 }
 
-function changeLineWidth() {
-    var userInput = document.getElementById("lineWidthInput").value;
-    var lineValue = userInput;
+function changeLineWidth(size) {
     var staffLines = document.getElementsByClassName("staffLine");
     for (var i = 0; i < staffLines.length; i++) {
-        staffLines[i].style.height = lineValue + "px";
+
+        if (size == "small") {
+            staffLines[i].style.height = 2 + "px";
+        }
+
+        if (size == "medium") {
+            staffLines[i].style.height = 4 + "px";
+        }
+
+        if (size == "large") {
+            staffLines[i].style.height = 6 + "px";
+        }
     }
 }
 
-function resetToBlack() {
+function drawStaves(size) {
+    var numberOfStaves = 0;
+    if (size == "small") { numberOfStaves = 6; }
+    if (size == "medium") { numberOfStaves = 3; }
+    if (size == "large") { numberOfStaves = 2; }
+    const staves = document.getElementsByClassName('staves')[0];
+
+    const staff = `
+    <div class="staff">
+        <hr class="staffLine staffLine1">
+        <hr class="staffLine staffLine2">
+        <hr class="staffLine staffLine3">
+        <hr class="staffLine staffLine4">
+        <hr class="staffLine staffLine5">
+    </div>
+`;
+
+    // Clear existing staves
+    staves.innerHTML = staff;
+
+    for (let i = 0; i < numberOfStaves; i++) {
+        staves.innerHTML += staff;
+    }
+}
+
+function presetSize(size) {
+    drawStaves(size);
+    applyColorPickerValues()
+    changeLineSpacing(size);
+    changeLineWidth(size);
+
+};
+
+function resetToBlackandSmall() {
     document.getElementById("picker1").value = "#ff0000";
     document.getElementById("picker2").value = "#ff8000";
     document.getElementById("picker3").value = "#0040ff";
     document.getElementById("picker4").value = "#40ff00";
     document.getElementById("picker5").value = "#bf00ff";
 
-    document.getElementById("lineSpaceInput").value = 1;
-    document.getElementById("lineWidthInput").value = 2;
-
     var staffLines = document.getElementsByClassName("staffLine");
     for (var i = 0; i < staffLines.length; i++) {
         staffLines[i].style.backgroundColor = "black";
-        staffLines[i].style.height = 2 + "px";
-        staffLines[i].style.marginBottom = "10px"
     }
 
-    var staves = document.getElementsByClassName("staff");
-    for (var i = 0; i < staves.length; i++) {
-        staves[i].style.marginBottom = "80px"
-    }
+    changeLineSpacing("small");
+    changeLineWidth("small");
 }
 
 function updateStaff() {
@@ -74,6 +131,7 @@ function presetGrayScale() {
     document.getElementById("picker3").value = black;
     document.getElementById("picker4").value = grey;
     document.getElementById("picker5").value = black;
+    changeStaffColor();
 }
 
 function presetRGB() {
@@ -85,6 +143,7 @@ function presetRGB() {
     document.getElementById("picker3").value = blue;
     document.getElementById("picker4").value = green;
     document.getElementById("picker5").value = red;
+    changeStaffColor();
 }
 
 function presetColorBlind() {
@@ -96,6 +155,7 @@ function presetColorBlind() {
     document.getElementById("picker3").value = blue;
     document.getElementById("picker4").value = purple;
     document.getElementById("picker5").value = orange;
+    changeStaffColor();
 }
 
 // Nav hamburgerburger selections
@@ -120,3 +180,52 @@ navLink.forEach((link) =>
         ul.classList.remove("show");
     })
 );
+
+function applyColorPickerValues() {
+    for (var i = 1; i < 6; i++) {
+        var colorPicker = document.getElementById('picker' + i);
+        // Get the selected color value
+        var selectedColor = colorPicker.value;
+
+        //get the collection of stafflines
+        var staffLines = document.getElementsByClassName("staffLine" + i);
+
+        //change each staff line if appropriate
+        for (var j = 0; j < staffLines.length; j++) {
+            var staffLine = staffLines[j];
+            // Set the background color using style.backgroundColor
+            staffLine.style.backgroundColor = selectedColor;
+        }
+    }
+}
+
+
+
+//update color picker values immediately
+document.addEventListener('DOMContentLoaded', function () {
+    for (var i = 1; i < 6; i++) {
+        attachColorPickerEvent(i);
+    }
+});
+
+function attachColorPickerEvent(i) {
+    const colorPicker = document.getElementById('picker' + i);
+    // Add an event listener for the 'input' event on the color picker
+    colorPicker.addEventListener('input', function (event) {
+        // Get the selected color value
+        var selectedColor = event.target.value;
+
+        //get the collection of stafflines
+        var staffLines = document.getElementsByClassName("staffLine" + i);
+
+        //change each staff line if appropriate
+        for (var j = 0; j < staffLines.length; j++) {
+            var staffLine = staffLines[j];
+            // Set the background color using style.backgroundColor
+            staffLine.style.backgroundColor = selectedColor;
+        }
+    });
+}
+
+//update copyright year:
+document.getElementById("year").innerHTML = new Date().getFullYear();
